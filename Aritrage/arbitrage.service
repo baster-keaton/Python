@@ -1,0 +1,13 @@
+[Unit]
+Description=Servicio de Arbitraje Crypto
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/scan
+ExecStart=/home/ubuntu/scan/venv/bin/python app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
